@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{title}}
+{% endblock title %}
+    
+
+{% block content %}
+
+<h1 class="text-center m-3">Profile Information Page</h1>
+<p class="text-center m-2">Username: {{request.user.username}}</p>
+<p class="text-center m-2">Full Name: {{request.user.user_profile.full_name}}</p>
+{% comment %} <p class="text-center m-2">Username: {{request.user.username}}</p> {% endcomment %}
+
+<a href="{% url 'profile_update' %}" class="btn btn-outline-info">Update Profile</a>
+    
+{% endblock content %}
+    

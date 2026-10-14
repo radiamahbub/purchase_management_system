@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{title}}
+{% endblock title %}
+    
+
+{% block content %}
+
+<h1 class="text-center m-3">Supplier's Information Page</h1>
+<p class="text-center m-2">Supplier's Name: {{request.user.supplier_profile.supplier_name}}</p>
+
+<a href="{% url 'supplier_update' %}" class="btn btn-outline-info">Update Supplier</a>
+    
+{% endblock content %}
